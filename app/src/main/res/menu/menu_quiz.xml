@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/addQuestions"
+       android:title="Add Questions"
+        android:icon="@drawable/ic_add"
+        app:showAsAction="never"></item>
+
+    <item android:id="@+id/showAnswers"
+        android:title="Answers"
+        android:icon="@drawable/ic_gallery"
+        app:showAsAction="never"></item>
+
+    <item android:id="@+id/quiz"
+        android:title="Quiz"
+        android:icon="@drawable/ic_quiz"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/easy"
+                android:title="Easy"></item>
+            <item android:id="@+id/hard"
+                android:title="Hard"></item>
+        </menu>
+    </item>
+
+
+</menu>
