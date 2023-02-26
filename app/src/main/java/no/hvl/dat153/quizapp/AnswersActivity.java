@@ -1,7 +1,7 @@
 package no.hvl.dat153.quizapp;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -26,9 +26,8 @@ public class AnswersActivity extends AppCompatActivity {
 
         return questions;
     }
-
     public static void addQuestion(Bitmap image, String ansText) {
-        questions.add(new Pair<Bitmap, String>(image, ansText));
+        questions.add(new Pair<>(image, ansText));
     }
     public static void initializeQuestions(Bitmap q1, Bitmap q2, Bitmap q3) {
         addQuestion(q1, "klopp");
@@ -68,11 +67,12 @@ public class AnswersActivity extends AppCompatActivity {
     public void exitButton(){
         Button btnExit = findViewById(R.id.exit);
         btnExit.setOnClickListener(view -> {
-            Intent intent = new Intent(AnswersActivity.this, new MainActivity().getClass());
+            Intent intent = new Intent(AnswersActivity.this, MainActivity.class);
             startActivity(intent);
         });
     }
 
+    @SuppressLint("SetTextI18n")
     public void setPicturesAndAnswers(ArrayList<Pair<Bitmap, String>> pairs) {
         LinearLayout container = findViewById(R.id.container);
         for (Pair<Bitmap, String> imageData : pairs) {

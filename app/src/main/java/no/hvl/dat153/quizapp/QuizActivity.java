@@ -24,22 +24,17 @@ public class QuizActivity extends AppCompatActivity {
     public CountDownTimer timer;
     int score = 0;
     int answered = 0;
-
     private ArrayList<Pair<Bitmap, String>> questions;
-
     private ImageView imageView;
-
     private Button btn1;
     private Button btn2;
     private Button btn3;
     private Button btnExit;
     public ProgressBar simpleProgressBar;
 
-
     private void displayNextQuestion() {
 
         simpleProgressBar=(ProgressBar) findViewById(R.id.progressBar2); // initiate the progress bar
-
 
         TextView scoreBoard = findViewById(R.id.score);
         TextView feedback = findViewById(R.id.feedback);
@@ -149,7 +144,6 @@ public class QuizActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
